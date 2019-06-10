@@ -1,6 +1,4 @@
 
-@extends('layouts.styles')
-@extends('layouts.js')
 
 @foreach($users as $user)
 
