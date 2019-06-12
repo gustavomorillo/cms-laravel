@@ -20,11 +20,6 @@
 	<input type="email" name="email" placeholder="Enter email" class="form-control">
 	</div>
 
-	<div class="form-group">
-	<label for="photo_id">Photo id</label>
-	<input type="text" name="photo_id" placeholder="Enter photo_id" class="form-control">
-	</div>
-
 
 
 	<div class="form-group">
@@ -49,8 +44,8 @@
 	</div>
 	
 	<div class="form-group">
-	<label for="file">File</label>	
-    <input type="file" name="file_upload" >
+	<label for="photo_id">Photo</label>	
+    <input type="file" name="photo_id" >
     </div>   
 
 	<div class="form-group">
