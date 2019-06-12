@@ -17,6 +17,7 @@
 	    <thead>
 	      <tr>
 	        <th>Id</th>
+			<th>Photo</th>
 	        <th>Name</th>
 	        <th>Email</th>
 	        <th>Role</th>
@@ -32,6 +33,12 @@
 	    @foreach($users as $user)	
 	      <tr>
 	        <td>{{$user->id}}</td>
+			@if($user->photo)
+	        <td><img src="{{$user->photo->file}}"></td>
+			@else
+			<td>No Photo</td>
+			@endif
+
 	        <td>{{$user->name}}</td>
 	        <td>{{$user->email}}</td>
 	        <td>{{$user->role->name}}</td>
