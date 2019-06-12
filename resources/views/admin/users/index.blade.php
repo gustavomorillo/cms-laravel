@@ -33,13 +33,9 @@
 	    @foreach($users as $user)	
 	      <tr>
 	        <td>{{$user->id}}</td>
-			@if($user->photo)
-	        <td><img src="{{$user->photo->file}}"></td>
-			@else
-			<td>No Photo</td>
-			@endif
+			<td><img src="{{$user->photo ? $user->photo->file : 'http://placehold.it/400x400'}}" width="100px"></td>
 
-	        <td>{{$user->name}}</td>
+	        <td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
 	        <td>{{$user->email}}</td>
 	        <td>{{$user->role->name}}</td>
 	        <td>{{$user->is_active == 1 ? 'Active' : 'No Active'}}</td>
