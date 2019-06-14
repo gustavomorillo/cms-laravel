@@ -99,6 +99,7 @@
 
 			<form method="post" action="/admin/users/{{$user->id}}" id="create" enctype="multipart/form-data">
 			<input name="_method" type="hidden" value="DELETE">
+			{{csrf_field()}}
 
 			<button type="submit" class="btn btn-danger" >Delete</button>
 			</form>
