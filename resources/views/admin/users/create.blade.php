@@ -20,12 +20,19 @@
 	<input type="email" name="email" placeholder="Enter email" class="form-control">
 	</div>
 
+	<div class="form-group">
+	<label for="title"></label>
+	<input type="email" name="email" placeholder="Enter email" class="form-control">
+	</div>
+
+
+
 
 
 	<div class="form-group">
 	<label for="role_id">Role</label>
 		<select name="role_id" id="create" class="form-control">
-			<option value="">Select role</option>
+			
 		@foreach ($roles as $id => $role)
 			<option value="{{$id}}">{{$role}}</option>
         @endforeach
