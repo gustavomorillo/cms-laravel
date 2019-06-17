@@ -6,6 +6,12 @@
 
 @section('content')
 
+@if(Session::has('deleted_post'))
+
+<p class="bg-danger">{{session('deleted_post')}}</p>
+
+@endif
+
 <h1>Posts</h1>
 
 
@@ -31,8 +37,7 @@
             <td><img src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400'}}" width="100px"></td>
 		        <td>{{$post->user->name}}</td>
 		        <td>{{$post->category->name}}</td>
-		        <td>{{$post->photo_id}}</td>
-		        <td>{{$post->title}}</td>
+            <td><a href="{{route('posts.edit', $post->id)}}">{{$post->title}}</a></td>
 		        <td>{{$post->body}}</td>
 		        <td>{{$post->created_at->diffForHumans()}}</td>
 		        <td>{{$post->updated_at->diffForHumans()}}</td>

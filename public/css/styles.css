@@ -2,6 +2,10 @@
  	padding-top:  0px;
  }
 
+.button_float {
+	float: left; 
+	margin-right:20px;
+}
 
 /****************User Profile  *********************/
 .user-row {

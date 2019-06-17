@@ -20,10 +20,6 @@
 	<input type="email" name="email" placeholder="Enter email" class="form-control">
 	</div>
 
-	<div class="form-group">
-	<label for="title"></label>
-	<input type="email" name="email" placeholder="Enter email" class="form-control">
-	</div>
 
 
 
