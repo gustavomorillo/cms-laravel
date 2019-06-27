@@ -41,3 +41,18 @@
 .toppad
 {margin-top:20px;
 }
+#nested-comment {
+    margin-top: 60px!important;
+}
+.media {
+    margin-bottom: 30px!important;
+}
+.comment-reply {
+    margin-top: 30px!important;
+    display: none;
+    
+}
+
+.comment-reply {
+    padding-right: 0px!important;
+}

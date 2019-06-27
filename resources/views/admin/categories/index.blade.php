@@ -14,6 +14,7 @@
 <p class="bg-success">{{session('updated_category')}}</p>
 @endif
 
+@if($categories)
   <table class="table table-striped">
     <thead>
       <tr>
@@ -35,7 +36,7 @@
      
     </tbody>
   </table>
-
+@endif
 
 
 @endsection

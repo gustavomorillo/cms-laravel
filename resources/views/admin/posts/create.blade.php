@@ -36,7 +36,7 @@
     	<input type="file" name="photo_id" >
     </div> 
 
-	<div class="form-group">
+	<div class="form-group" >
 		<label for="body">Description</label>
 		<textarea name="body" placeholder="Enter description" class="form-control" rows='7'></textarea>
 	</div>
