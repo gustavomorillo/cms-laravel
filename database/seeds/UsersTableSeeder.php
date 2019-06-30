@@ -23,6 +23,28 @@ class UsersTableSeeder extends Seeder
 
         ]);
 
+        DB::table('roles')->insert([
+
+            'id'=> '1',
+            'name'=> 'administrator'
+            
+
+        ]);
+        DB::table('roles')->insert([
+
+            'id'=> '2',
+            'name'=> 'author'
+            
+
+        ]);
+        DB::table('roles')->insert([
+
+            'id'=> '3',
+            'name'=> 'subscriber'
+            
+
+        ]);
+
 
 
 
