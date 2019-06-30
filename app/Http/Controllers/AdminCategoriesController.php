@@ -36,8 +36,8 @@ class AdminCategoriesController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
-     */
-    public function store(CreateCategoryRequest $request)
+     */                  //CreateCategoryRequest
+    public function store(Request $request)
     {
         $input = $request->all();
 

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\http\requests\UsersEditRequest;
 use App\http\requests\UsersRequest;
 use Illuminate\Support\Facades\Session;
+
 use App\User;
 use App\Role;
 use App\Photo;
