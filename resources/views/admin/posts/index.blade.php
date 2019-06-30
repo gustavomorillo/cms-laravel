@@ -40,7 +40,7 @@
             <td><img src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400'}}" width="100px"></td>
 		        <td>{{$post->user->name}}</td>
 		        <td>{{$post->category->name}}</td>
-		        <td>{{$post->body}}</td>
+		        <td class="col-sm-3">{{str_limit($post->body, 30)}}</td>
 		        <td>{{$post->created_at->diffForHumans()}}</td>
             <td>{{$post->updated_at->diffForHumans()}}</td>
             <td><a href="{{route('home.post',$post->id) }}">View post</a></td>
