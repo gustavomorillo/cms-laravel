@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\http\requests\CreateCategoryRequest;
+use App\http\Requests\CreateCategoryRequest;
 use Illuminate\Support\Facades\Session;
 use App\Category;
 
@@ -37,7 +37,7 @@ class AdminCategoriesController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */                  //CreateCategoryRequest
-    public function store(Request $request)
+    public function store(CreateCategoryRequest $request)
     {
         $input = $request->all();
 
