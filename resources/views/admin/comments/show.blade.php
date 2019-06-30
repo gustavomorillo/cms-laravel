@@ -8,7 +8,7 @@
 
 <h1>Comments</h1>
 
-@if(count($replys) > 0)
+@if(count($comments) > 0)
 <table class="table table-striped">
   <thead>
     <tr>
@@ -23,21 +23,21 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($replys as $reply)
+    @foreach($comments as $comment)
 
     <tr>
-      <td>{{$reply->id}}</td>
-      <td>{{$reply->author}}</td>
-      <td>{{$reply->email}}</td>
-      <td>{{$reply->body}}</td>
-      <td>{{$reply->created_at->diffForHumans()}}</td>
-      <td><a href="{{route('home.post',$reply->post->id) }}">View post</a></td>
+      <td>{{$comment->id}}</td>
+      <td>{{$comment->author}}</td>
+      <td>{{$comment->email}}</td>
+      <td class="col-sm-2">{{$comment->body}}</td>
+      <td>{{$comment->created_at->diffForHumans()}}</td>
+      <td><a href="{{route('home.post',$comment->post->id) }}">View post</a></td>
 
       <td>
 
-        @if($reply->is_active == 1)
+        @if($comment->is_active == 1)
 
-        <form method="post" action="/admin/comments/{{$reply->id}}">
+        <form method="post" action="/admin/comments/{{$comment->id}}">
           <input name="_method" type="hidden" value="PATCH">
           <input type="hidden" name="is_active" value="0">
 
@@ -53,7 +53,7 @@
           
         @else
 
-        <form method="post" action="/admin/comments/{{$reply->id}}">
+        <form method="post" action="/admin/comments/{{$comment->id}}">
           <input name="_method" type="hidden" value="PATCH">
           <input type="hidden" name="is_active" value="1">
 
@@ -74,7 +74,7 @@
       <td>
 
 
-            <form method="post" action="/admin/comments/{{$reply->id}}">
+            <form method="post" action="/admin/comments/{{$comment->id}}">
             <input name="_method" type="hidden" value="DELETE">
             {{csrf_field()}}
       

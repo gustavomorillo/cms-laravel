@@ -8,8 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Post;
 use App\Photo;
-use App\Category;
 use App\Comment;
+use App\Category;
+
 
 class AdminPostsController extends Controller
 {
@@ -121,7 +122,11 @@ class AdminPostsController extends Controller
             $input['photo_id'] = $photo->id;
         }
 
-        Auth::user()->posts()->whereId($id)->first()->update($input);
+        // Auth::user()->posts()->whereId($id)->first()->update($input);
+
+        $post = Post::findOrfail($id);
+
+        $post->update($input);
 
         return redirect('/admin/posts');
     }
@@ -147,14 +152,5 @@ class AdminPostsController extends Controller
         return redirect('/admin/posts');
     }
 
-    public function post($id)
-    {
-        $post = Post::findOrFail($id);
-
-        $user = $post->user;
-
-        $comments = $post->comments()->where('is_active', 1)->get();
-
-        return view('post', compact('post', 'comments', 'user'));
-    }
+  
 }

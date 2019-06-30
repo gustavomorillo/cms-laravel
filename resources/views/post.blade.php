@@ -44,7 +44,7 @@
           <hr>
 
           <!-- Post Content -->
-        <p class="lead">{{$post->body}} </p>
+        <p class="lead">{!! $post->body !!}</p>
 
           <hr>
 
@@ -192,26 +192,22 @@
               <div class="row">
                   <div class="col-lg-6">
                       <ul class="list-unstyled">
-                          <li><a href="#">Category Name</a>
-                          </li>
-                          <li><a href="#">Category Name</a>
-                          </li>
-                          <li><a href="#">Category Name</a>
-                          </li>
-                          <li><a href="#">Category Name</a>
-                          </li>
+                        @if($categories)
+                        @foreach($categories as $category)
+                          <li><a href="#">{{$category->name}}</a> </li>
+                          @endforeach
+                          @endif
+                         
                       </ul>
                   </div>
                   <div class="col-lg-6">
                       <ul class="list-unstyled">
-                          <li><a href="#">Category Name</a>
+                            @if($categories)
+                            @foreach($categories as $category)
+                          <li><a href="#">{{$category->name}}</a>
                           </li>
-                          <li><a href="#">Category Name</a>
-                          </li>
-                          <li><a href="#">Category Name</a>
-                          </li>
-                          <li><a href="#">Category Name</a>
-                          </li>
+                          @endforeach
+                          @endif
                       </ul>
                   </div>
               </div>
@@ -235,7 +231,7 @@
   <footer>
       <div class="row">
           <div class="col-lg-12">
-              <p>Copyright &copy; Your Website 2014</p>
+              <p>Copyright &copy; Your Website 2019</p>
           </div>
       </div>
       <!-- /.row -->
