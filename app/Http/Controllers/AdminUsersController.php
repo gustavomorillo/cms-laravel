@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\requests\UsersEditRequest;
-use App\Http\requests\UsersRequest;
+use App\Http\Requests\UsersEditRequest;
+use App\Http\Requests\UsersRequest;
 use Illuminate\Support\Facades\Session;
 
 use App\User;
