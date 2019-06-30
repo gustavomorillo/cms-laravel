@@ -19,7 +19,7 @@
 
 
 
-<link href="css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/all.css">
         
 
 
