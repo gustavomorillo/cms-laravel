@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\http\Requests\CreateCategoryRequest;
+use App\http\requests\CreateCategoryRequest;
 use Illuminate\Support\Facades\Session;
 use App\Category;
 
