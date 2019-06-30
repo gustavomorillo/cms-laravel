@@ -19,7 +19,7 @@
 
 
 
-<link href="{{ asset('css/all.css') }}" rel="stylesheet">
+<link href="css/all.css" rel="stylesheet">
         
 
 
